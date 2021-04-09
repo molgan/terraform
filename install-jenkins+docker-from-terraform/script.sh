@@ -7,7 +7,6 @@ sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
 sudo apt-get update
 sudo apt-get install openjdk-11-jdk -y
 sudo apt-get install jenkins -y
-sudo reboot
 
 # Install Docker
 sudo apt-get update 
@@ -25,7 +24,7 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 
 # Add new users to the docker group
-sudo usermod -aG docker $USER
+sudo usermod -aG docker ubuntu
 sudo usermod -aG docker jenkins
 
 # Install Docker Compose
@@ -33,4 +32,3 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.28.6/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 
 sudo reboot
-
